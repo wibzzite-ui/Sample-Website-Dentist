@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klayworkz Barista – KlayBar Art Café | Bangalore's Best Café – Live Pottery, Painting & Dining</title>
+  <meta name="description" content="Klayworkz Barista-KlayBar Art Café blends coffee, food, and art. Enjoy handcrafted drinks, pottery & painting workshops at the best cafe in Bangalore" />
+  <meta property="og:title" content="KlayBar Art Café – Eat. Create. Connect." />
+  <meta property="og:description" content="Klayworkz Barista-KlayBar Art Café blends coffee, food, and art in JP Nagar, Bangalore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-klay">Klay</span><span class="logo-bar">Bar</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="food.html">Food & Beverages</a></li>
+        <li><a href="art.html">Art – DIY</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Events <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="dropdown-menu">
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+          </ul>
+        </li>
+        <li><a href="foundingteam.html">Founding Team</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="reservations.html" class="nav-cta">Reserve a Seat</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <img src="hero_bg.jpg" alt="KlayBar Art Café Interior" class="hero-img" />
+    <div class="hero-content">
+      <span class="hero-badge">JP Nagar, Bengaluru</span>
+      <h1 class="hero-title">Where Food Meets<br />
+        <span class="fold-text-wrap" id="foldTextWrap" aria-live="polite">
+          <em class="fold-text-word" id="foldTextWord">Art &amp; Soul</em>
+        </span>
+      </h1>
+      <p class="hero-sub">A one-of-a-kind Fusion Restaurant & Art Café — eat, create, and connect in one beautiful space.</p>
+      <div class="hero-actions">
+        <a href="reservations.html" class="btn btn-primary" id="hero-reserve-btn">Reserve a Seat</a>
+        <a href="#about" class="btn btn-ghost">Discover More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">Tue–Sun</span><span class="stat-label">Open Days</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">11am–11pm</span><span class="stat-label">Hours</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">JP Nagar</span><span class="stat-label">Bengaluru</span></div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text" data-animate>
+          <span class="section-tag">Our Story</span>
+          <h2>Welcome to <span class="highlight">KlayBar</span></h2>
+          <p>Welcome to KlayBar, a one-of-a-kind Fusion Restaurant & Art Café in Bangalore, where food meets creativity!</p>
+          <p>Located in JP Nagar, Bengaluru, we offer a unique experience that blends gourmet dining with hands-on pottery and ceramic painting. Whether you're here to savor handcrafted pizzas, fresh hydroponic produce, or unwind with a pottery session, KlayBar is the perfect spot to eat, create, and connect.</p>
+          <p>Designed as a <strong>"Third Place"</strong> — a space beyond home and work — KlayBar is ideal for college students, professionals, remote workers, solo travelers, and art enthusiasts seeking a refreshing break.</p>
+          <a href="https://g.co/kgs/B4YFESY" target="_blank" class="btn btn-outline" id="find-us-btn">Find Us on Maps</a>
+        </div>
+        <div class="about-visual" data-animate>
+          <div class="about-img-stack">
+            <img src="pottery.jpg" alt="Pottery Workshop at KlayBar" class="about-img about-img-main" />
+            <div class="about-badge-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              <span>Live Workshops</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">All at One Place</span>
+        <h2>Enjoy Everything<br /><em>Your Time Just Got Better!</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-animate>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <img src="coffee.jpg" alt="Food & Beverages" class="service-img" />
+          <div class="service-body">
+            <h3>Food & Beverages</h3>
+            <p>Savor artisanal coffee, refreshing coolers, & handcrafted bites at KlayBar. From hearty sandwiches to indulgent desserts, our menu pairs perfectly with creativity & cozy conversations.</p>
+            <a href="food.html" class="service-link">Explore Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="service-card featured" data-animate>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <img src="art.jpg" alt="Art & DIY at KlayBar" class="service-img" />
+          <div class="service-body">
+            <h3>Art & DIY</h3>
+            <p>Art is at the heart of KlayBar! From pottery and ceramic painting to creative DIY projects, we celebrate artistic expression in every form. Our space is designed to inspire and encourage creativity.</p>
+            <a href="art.html" class="service-link">Explore Art <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <img src="diy.jpg" alt="Events at KlayBar" class="service-img" />
+          <div class="service-body">
+            <h3>Events</h3>
+            <p>From private gatherings to themed art nights, KlayBar is the perfect venue for memorable events. Whether it's a birthday, corporate event, or creative meetup, we offer a unique artistic setting.</p>
+            <a href="events.html" class="service-link">Explore Events <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <img src="community.jpg" alt="Reservations at KlayBar" class="service-img" />
+          <div class="service-body">
+            <h3>Reservations</h3>
+            <p>Walk-ins are welcome, but we recommend reservations for group activities, workshops, and events. For groups of 15+, call ahead to secure your spot. Book now for a great experience!</p>
+            <a href="reservations.html" class="service-link">Reserve Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>☕ Coffee Crafted to Perfection</span>
+      <span>🏺 Live Pottery Sessions</span>
+      <span>🎨 Ceramic Painting</span>
+      <span>🍕 Handcrafted Pizzas</span>
+      <span>🌿 Hydroponic Fresh Produce</span>
+      <span>🎉 Private Events</span>
+      <span>✨ Art Workshops</span>
+      <span>🍵 Artisan Teas</span>
+      <span>☕ Coffee Crafted to Perfection</span>
+      <span>🏺 Live Pottery Sessions</span>
+      <span>🎨 Ceramic Painting</span>
+      <span>🍕 Handcrafted Pizzas</span>
+      <span>🌿 Hydroponic Fresh Produce</span>
+      <span>🎉 Private Events</span>
+      <span>✨ Art Workshops</span>
+      <span>🍵 Artisan Teas</span>
+    </div>
+  </div>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Got Questions?</span>
+        <h2>Frequently Asked<br /><em>Questions</em></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+            <span>01 &nbsp; What is Klayworkz Barista – KlayBar Art Cafe?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>KlayBar is a unique art café that blends creativity with cuisine. We offer a space for ceramic painting, pottery, and other artistic experiences, along with a curated menu of delicious food and beverages.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+            <span>02 &nbsp; Where is KlayBar located?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>Klayworkz Barista Art Cafe – KlayBar Art Cafe is located at <strong>39, 15th Cross, 100 Feet Ring Rd, 4th Phase, J. P. Nagar, Bengaluru, Karnataka 560078</strong></p>
+            <a href="https://maps.app.goo.gl/npsBwNUscbHL2kDv7" target="_blank" class="faq-link">Open in Google Maps →</a>
+          </div>
+        </div>
+
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+            <span>03 &nbsp; What are our working days & hours?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>We are open <strong>Tuesday to Sunday, 11am to 11pm</strong>.<br />Open on all Holidays too!</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+            <span>04 &nbsp; How do I make a reservation?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>You can book through:</p>
+            <ul>
+              <li>Our website (Reservations page)</li>
+              <li>WhatsApp: <a href="https://wa.me/917019115511" target="_blank">+91 70191 15511</a></li>
+              <li>Instagram: <a href="https://www.instagram.com/klayworkzbarista" target="_blank">@klayworkzbarista</a> or <a href="https://www.instagram.com/artatklayworkz/" target="_blank">@artatklayworkz</a></li>
+              <li>LinkedIn: <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank">KlayworkzBarista-KlayBar</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+            <span>05 &nbsp; Do I need to make a reservation?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <p>Walk-ins are welcome, but we recommend making a reservation, especially for group activities, pottery workshops, and events.</p>
+            <p>WhatsApp us on:<br />Primary: <a href="https://wa.me/917019115511">+91 70191 15511</a><br />Backup: <a href="https://wa.me/919035301526">+91 90353 01526</a></p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-animate>
+          <button class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
+            <span>06 &nbsp; Is there an entry fee or cover charge?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
+            <p>No, there is no entry fee or cover charge. <strong>You pay for only what you eat or choose to do.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">What People Say</span>
+        <h2>Guest <em>Testimonials</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-animate>
+          <div class="stars">★★★★★</div>
+          <p>"An absolutely magical place. The pottery session was therapeutic and the coffee was perfect. KlayBar is my new favorite third place in Bangalore!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">ST</div>
+            <span>Surya T.</span>
+          </div>
+        </div>
+        <div class="testimonial-card featured" data-animate>
+          <div class="stars">★★★★★</div>
+          <p>"Loved the vibe! The ceramic painting was so much fun and the food was delicious. A perfect blend of creativity and great cuisine. Will definitely be back!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">KP</div>
+            <span>Kannu P.</span>
+          </div>
+        </div>
+        <div class="testimonial-card" data-animate>
+          <div class="stars">★★★★★</div>
+          <p>"A hidden gem in JP Nagar! Perfect for a date, a team outing, or even solo creative time. The art sessions and food menu are both outstanding."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">PA</div>
+            <span>Peter A.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Reach Us</span>
+        <h2>Have a Question?<br /><em>We'd Love to Hear From You!</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-animate>
+          <div class="contact-block">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <p>39, 15th Cross, 100 Feet Ring Rd, 4th Phase,<br />J. P. Nagar, Bengaluru, Karnataka 560078</p>
+              <p class="landmark">📍 Near Vega City Mall · Next to Bodycraft Salon & HDFC Bank</p>
+              <a href="https://g.co/kgs/B4YFESY" target="_blank" class="map-link" id="contact-map-btn">Get Directions →</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Tuesday – Sunday: <strong>11am – 11pm</strong></p>
+              <p>Open on all Holidays!</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.92 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+919019250575">+91 9019 250575</a></p>
+              <p>WhatsApp: <a href="https://wa.me/917019115511" target="_blank">+91 70191 15511</a></p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:ask@klayworkzbarista.com">ask@klayworkzbarista.com</a></p>
+            </div>
+          </div>
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <div class="socials">
+              <a href="https://www.instagram.com/klayworkzbarista" target="_blank" class="social-btn" id="social-ig-main" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                @klayworkzbarista
+              </a>
+              <a href="https://www.instagram.com/artatklayworkz/" target="_blank" class="social-btn" id="social-ig-art" aria-label="Art Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                @artatklayworkz
+              </a>
+              <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank" class="social-btn" id="social-li" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://wa.me/917019115511" target="_blank" class="social-btn" id="social-wa" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" data-animate>
+          <form class="contact-form" id="contactForm" novalidate>
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" name="subject">
+                <option value="">Select a topic...</option>
+                <option value="reservation">Reservation Inquiry</option>
+                <option value="event">Private Event / Corporate</option>
+                <option value="workshop">Workshop Booking</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Tell us more about your visit or event..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="cf-submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo">
+            <span class="logo-klay">Klay</span><span class="logo-bar">Bar</span>
+          </a>
+          <p>Klayworkz Barista – KlayBar Art Café. A fusion restaurant & art café in JP Nagar, Bengaluru, where food meets creativity.</p>
+        </div>
+        <div class="footer-nav">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html">Food & Beverages</a></li>
+            <li><a href="art.html">Art – DIY</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="foundingteam.html">Founding Team</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="https://www.klaybar.net/accessibility-statement" target="_blank">Accessibility</a></li>
+            <li><a href="https://www.klaybar.net/blank-1" target="_blank">Refund Policy</a></li>
+            <li><a href="https://www.klaybar.net/blank" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.klaybar.net/privacy-policy" target="_blank">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>39, 15th Cross, 100 Feet Ring Rd, 4th Phase, J. P. Nagar, Bengaluru, Karnataka 560078</p>
+          <p>📍 Near Vega City Mall · Next to Bodycraft Salon & HDFC Bank</p>
+          <p><a href="mailto:ask@klayworkzbarista.com">ask@klayworkzbarista.com</a></p>
+          <p><a href="tel:+919019250575">+91 9019 250575</a></p>
+          <p>Tue–Sun: 11am – 11pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 Klayworkz Barista – KlayBar Art Café. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/klayworkzbarista" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/917019115511" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917019115511" target="_blank" class="whatsapp-float" id="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
