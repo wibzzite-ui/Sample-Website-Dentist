@@ -1,471 +1,928 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klayworkz Barista – KlayBar Art Café | Bangalore's Best Café – Live Pottery, Painting & Dining</title>
-  <meta name="description" content="Klayworkz Barista-KlayBar Art Café blends coffee, food, and art. Enjoy handcrafted drinks, pottery & painting workshops at the best cafe in Bangalore" />
-  <meta property="og:title" content="KlayBar Art Café – Eat. Create. Connect." />
-  <meta property="og:description" content="Klayworkz Barista-KlayBar Art Café blends coffee, food, and art in JP Nagar, Bangalore." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Dental & Aesthetics — Premium Dental Care in Yelahanka, Bengaluru</title>
+  <meta name="description" content="Experience exceptional dental care at Advance Dental & Aesthetics in Yelahanka, Bengaluru. Led by Dr. Vinayak T Banakar (BDS, MDS), offering smile designing, dental implants, hair transplant, braces, root canal treatments, and aesthetic dentistry.">
+  <meta name="keywords" content="dental clinic Yelahanka, dentist Bengaluru, smile designing, dental implants, hair transplant, root canal, braces, aligners, aesthetic dentistry, Dr Vinayak Banakar">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__spinner"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-klay">Klay</span><span class="logo-bar">Bar</span>
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <div class="navbar__logo-icon">
+          <i class="fas fa-tooth"></i>
+        </div>
+        Advance Dental
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+
+      <div class="navbar__links">
+        <a href="#home" class="navbar__link active">Home</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#services" class="navbar__link">Services</a>
+        <a href="#doctor" class="navbar__link">Doctor</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+      </div>
+
+      <a href="#appointment" class="btn btn--primary navbar__cta">
+        Book Appointment <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="food.html">Food & Beverages</a></li>
-        <li><a href="art.html">Art – DIY</a></li>
-        <li><a href="reservations.html">Reservations</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Events <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
-          <ul class="dropdown-menu">
-            <li><a href="events.html">Upcoming Events</a></li>
-            <li><a href="past-events.html">Past Events</a></li>
-          </ul>
-        </li>
-        <li><a href="foundingteam.html">Founding Team</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="reservations.html" class="nav-cta">Reserve a Seat</a></li>
-      </ul>
     </div>
   </nav>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="mobile-close" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#doctor">Doctor</a>
+    <a href="#contact">Contact</a>
+    <a href="#appointment" class="btn btn--primary" style="margin-top: 16px;">Book Appointment</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <img src="hero_bg.jpg" alt="KlayBar Art Café Interior" class="hero-img" />
-    <div class="hero-content">
-      <span class="hero-badge">JP Nagar, Bengaluru</span>
-      <h1 class="hero-title">Where Food Meets<br />
-        <span class="fold-text-wrap" id="foldTextWrap" aria-live="polite">
-          <em class="fold-text-word" id="foldTextWord">Art &amp; Soul</em>
-        </span>
-      </h1>
-      <p class="hero-sub">A one-of-a-kind Fusion Restaurant & Art Café — eat, create, and connect in one beautiful space.</p>
-      <div class="hero-actions">
-        <a href="reservations.html" class="btn btn-primary" id="hero-reserve-btn">Reserve a Seat</a>
-        <a href="#about" class="btn btn-ghost">Discover More</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">Tue–Sun</span><span class="stat-label">Open Days</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">11am–11pm</span><span class="stat-label">Hours</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">JP Nagar</span><span class="stat-label">Bengaluru</span></div>
-      </div>
-    </div>
-    <a href="#about" class="hero-scroll" aria-label="Scroll down">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
-  </section>
+    <div class="hero__shape hero__shape--1"></div>
+    <div class="hero__shape hero__shape--2"></div>
+    <div class="hero__shape hero__shape--3"></div>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text" data-animate>
-          <span class="section-tag">Our Story</span>
-          <h2>Welcome to <span class="highlight">KlayBar</span></h2>
-          <p>Welcome to KlayBar, a one-of-a-kind Fusion Restaurant & Art Café in Bangalore, where food meets creativity!</p>
-          <p>Located in JP Nagar, Bengaluru, we offer a unique experience that blends gourmet dining with hands-on pottery and ceramic painting. Whether you're here to savor handcrafted pizzas, fresh hydroponic produce, or unwind with a pottery session, KlayBar is the perfect spot to eat, create, and connect.</p>
-          <p>Designed as a <strong>"Third Place"</strong> — a space beyond home and work — KlayBar is ideal for college students, professionals, remote workers, solo travelers, and art enthusiasts seeking a refreshing break.</p>
-          <a href="https://g.co/kgs/B4YFESY" target="_blank" class="btn btn-outline" id="find-us-btn">Find Us on Maps</a>
+    <div class="container hero__content">
+      <div class="hero__text">
+        <div class="hero__overline">
+          <i class="fas fa-circle"></i>
+          Now accepting appointments
         </div>
-        <div class="about-visual" data-animate>
-          <div class="about-img-stack">
-            <img src="pottery.jpg" alt="Pottery Workshop at KlayBar" class="about-img about-img-main" />
-            <div class="about-badge-card">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-              <span>Live Workshops</span>
-            </div>
+        <h1 class="hero__title split-text" id="hero-split-text">
+          Your <span>Smile</span> is Our Passion
+        </h1>
+        <p class="hero__desc">
+          Experience exceptional dental care at our modern clinic in Yelahanka, Bengaluru. Our skilled team utilizes advanced technology for precise diagnoses and treatments, prioritizing your comfort every step of the way.
+        </p>
+        <div class="hero__actions">
+          <a href="#appointment" class="btn btn--primary">
+            Book Appointment <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="tel:+919606371778" class="btn btn--outline">
+            <i class="fas fa-phone"></i> Call Us Now
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-value" data-count="5000" data-suffix="+">0</div>
+            <div class="hero__stat-label">Happy Patients</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value" data-count="15" data-suffix="+">0</div>
+            <div class="hero__stat-label">Years Experience</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value" data-count="20" data-suffix="+">0</div>
+            <div class="hero__stat-label">Treatments</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===================== SERVICES ===================== -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">All at One Place</span>
-        <h2>Enjoy Everything<br /><em>Your Time Just Got Better!</em></h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card" data-animate>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80" alt="Dental care professional">
+        </div>
+        <div class="hero__floating-card hero__floating-card--top">
+          <div class="hero__floating-card-icon hero__floating-card-icon--success">
+            <i class="fas fa-check"></i>
           </div>
-          <img src="coffee.jpg" alt="Food & Beverages" class="service-img" />
-          <div class="service-body">
-            <h3>Food & Beverages</h3>
-            <p>Savor artisanal coffee, refreshing coolers, & handcrafted bites at KlayBar. From hearty sandwiches to indulgent desserts, our menu pairs perfectly with creativity & cozy conversations.</p>
-            <a href="food.html" class="service-link">Explore Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="hero__floating-card-text">
+            <strong>Verified Clinic</strong>
+            <span>ISO Certified Standards</span>
           </div>
         </div>
-
-        <div class="service-card featured" data-animate>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <div class="hero__floating-card hero__floating-card--bottom">
+          <div class="hero__floating-card-icon hero__floating-card-icon--info">
+            <i class="fas fa-star"></i>
           </div>
-          <img src="art.jpg" alt="Art & DIY at KlayBar" class="service-img" />
-          <div class="service-body">
-            <h3>Art & DIY</h3>
-            <p>Art is at the heart of KlayBar! From pottery and ceramic painting to creative DIY projects, we celebrate artistic expression in every form. Our space is designed to inspire and encourage creativity.</p>
-            <a href="art.html" class="service-link">Explore Art <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
-        </div>
-
-        <div class="service-card" data-animate>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <img src="diy.jpg" alt="Events at KlayBar" class="service-img" />
-          <div class="service-body">
-            <h3>Events</h3>
-            <p>From private gatherings to themed art nights, KlayBar is the perfect venue for memorable events. Whether it's a birthday, corporate event, or creative meetup, we offer a unique artistic setting.</p>
-            <a href="events.html" class="service-link">Explore Events <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </div>
-        </div>
-
-        <div class="service-card" data-animate>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <img src="community.jpg" alt="Reservations at KlayBar" class="service-img" />
-          <div class="service-body">
-            <h3>Reservations</h3>
-            <p>Walk-ins are welcome, but we recommend reservations for group activities, workshops, and events. For groups of 15+, call ahead to secure your spot. Book now for a great experience!</p>
-            <a href="reservations.html" class="service-link">Reserve Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="hero__floating-card-text">
+            <strong>4.9 Rating</strong>
+            <span>200+ Google Reviews</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== MARQUEE ===================== -->
-  <div class="marquee-bar">
-    <div class="marquee-track">
-      <span>☕ Coffee Crafted to Perfection</span>
-      <span>🏺 Live Pottery Sessions</span>
-      <span>🎨 Ceramic Painting</span>
-      <span>🍕 Handcrafted Pizzas</span>
-      <span>🌿 Hydroponic Fresh Produce</span>
-      <span>🎉 Private Events</span>
-      <span>✨ Art Workshops</span>
-      <span>🍵 Artisan Teas</span>
-      <span>☕ Coffee Crafted to Perfection</span>
-      <span>🏺 Live Pottery Sessions</span>
-      <span>🎨 Ceramic Painting</span>
-      <span>🍕 Handcrafted Pizzas</span>
-      <span>🌿 Hydroponic Fresh Produce</span>
-      <span>🎉 Private Events</span>
-      <span>✨ Art Workshops</span>
-      <span>🍵 Artisan Teas</span>
+  <!-- ===== TICKER BAR ===== -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <span class="ticker__item"><i class="fas fa-circle"></i> Smile Designing</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Hair Transplant</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Dental Implants</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Root Canal Treatment</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Braces & Aligners</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Full Mouth Rehabilitation</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Teeth Whitening</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> PRP Therapy</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Laser Treatment</span>
+      <span class="ticker__item"><i class="fas fa-circle"></i> Pediatric Dentistry</span>
     </div>
   </div>
 
-  <!-- ===================== FAQ ===================== -->
-  <section class="faq section" id="faq">
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
     <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Got Questions?</span>
-        <h2>Frequently Asked<br /><em>Questions</em></h2>
-      </div>
-      <div class="faq-grid">
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
-            <span>01 &nbsp; What is Klayworkz Barista – KlayBar Art Cafe?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-            <p>KlayBar is a unique art café that blends creativity with cuisine. We offer a space for ceramic painting, pottery, and other artistic experiences, along with a curated menu of delicious food and beverages.</p>
+      <div class="about__grid">
+        <div class="about__images reveal">
+          <div class="about__experience-badge">
+            <div class="about__experience-badge-num">15+</div>
+            <div class="about__experience-badge-text">Years Experience</div>
           </div>
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80" alt="Modern dental clinic interior" class="about__img-main">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=500&q=80" alt="Dental treatment" class="about__img-float">
         </div>
 
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
-            <span>02 &nbsp; Where is KlayBar located?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-            <p>Klayworkz Barista Art Cafe – KlayBar Art Cafe is located at <strong>39, 15th Cross, 100 Feet Ring Rd, 4th Phase, J. P. Nagar, Bengaluru, Karnataka 560078</strong></p>
-            <a href="https://maps.app.goo.gl/npsBwNUscbHL2kDv7" target="_blank" class="faq-link">Open in Google Maps →</a>
-          </div>
-        </div>
+        <div class="about__info reveal reveal--delay-2">
+          <div class="section-badge"><i class="fas fa-circle"></i> About Us</div>
+          <h2 class="section-title">Why You Should Trust Us? Get to Know About Us!</h2>
+          <p class="section-subtitle" style="max-width: 100%">
+            Experience exceptional dental care at our modern clinic. Our skilled dentists utilize advanced technology for precise diagnoses and treatments. We prioritize your comfort with a friendly staff and an inviting environment. With flexible scheduling and emergency services, we provide convenient care. Trust us to deliver the best dental experience tailored to you.
+          </p>
+          <p class="section-subtitle" style="max-width: 100%; margin-top: 12px;">
+            Our state-of-the-art facility is equipped with the latest digital imaging, 3D scanning technology, and sterilization protocols that meet international standards. We believe in a holistic approach to oral health — treating the whole patient, not just the symptoms.
+          </p>
 
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
-            <span>03 &nbsp; What are our working days & hours?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-            <p>We are open <strong>Tuesday to Sunday, 11am to 11pm</strong>.<br />Open on all Holidays too!</p>
-          </div>
-        </div>
-
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
-            <span>04 &nbsp; How do I make a reservation?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-            <p>You can book through:</p>
-            <ul>
-              <li>Our website (Reservations page)</li>
-              <li>WhatsApp: <a href="https://wa.me/917019115511" target="_blank">+91 70191 15511</a></li>
-              <li>Instagram: <a href="https://www.instagram.com/klayworkzbarista" target="_blank">@klayworkzbarista</a> or <a href="https://www.instagram.com/artatklayworkz/" target="_blank">@artatklayworkz</a></li>
-              <li>LinkedIn: <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank">KlayworkzBarista-KlayBar</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
-            <span>05 &nbsp; Do I need to make a reservation?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-            <p>Walk-ins are welcome, but we recommend making a reservation, especially for group activities, pottery workshops, and events.</p>
-            <p>WhatsApp us on:<br />Primary: <a href="https://wa.me/917019115511">+91 70191 15511</a><br />Backup: <a href="https://wa.me/919035301526">+91 90353 01526</a></p>
-          </div>
-        </div>
-
-        <div class="faq-item" data-animate>
-          <button class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
-            <span>06 &nbsp; Is there an entry fee or cover charge?</span>
-            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
-            <p>No, there is no entry fee or cover charge. <strong>You pay for only what you eat or choose to do.</strong></p>
+          <div class="about__checklist">
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Quality Health Care
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Exceptional Dental Care
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Comprehensive Services
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Patient-Centered Approach
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Latest Technology
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Affordable Pricing
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Emergency Services
+            </div>
+            <div class="about__check-item">
+              <i class="fas fa-check-circle"></i> Pain-Free Treatments
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials section" id="testimonials">
+  <!-- ===== SERVICES ===== -->
+  <section class="section section--alt" id="services">
     <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">What People Say</span>
-        <h2>Guest <em>Testimonials</em></h2>
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> Our Services</div>
+        <h2 class="section-title">Health Care Solutions</h2>
+        <p class="section-subtitle">Comprehensive dental and aesthetic treatments designed to give you the perfect smile you deserve.</p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"An absolutely magical place. The pottery session was therapeutic and the coffee was perfect. KlayBar is my new favorite third place in Bangalore!"</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">ST</div>
-            <span>Surya T.</span>
+
+      <div class="services__grid">
+
+        <!-- Service 1 -->
+        <div class="service-card reveal">
+          <div class="service-card__icon service-card__icon--blue">
+            <i class="fas fa-teeth"></i>
+          </div>
+          <h3 class="service-card__title">Complete Dentures</h3>
+          <p class="service-card__desc">Experience a natural-looking smile with our complete dentures, designed to provide comfort and restore full dental function. Custom-fitted using digital impressions for a perfect, comfortable fit every time.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-card__icon service-card__icon--purple">
+            <i class="fas fa-teeth-open"></i>
+          </div>
+          <h3 class="service-card__title">Partial Dentures</h3>
+          <p class="service-card__desc">Our partial dentures are perfect for filling gaps and ensuring your remaining teeth stay in place while improving your smile. Made from high-quality, biocompatible materials for long-lasting durability.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-card__icon service-card__icon--green">
+            <i class="fas fa-tooth"></i>
+          </div>
+          <h3 class="service-card__title">Root Canal Treatment</h3>
+          <p class="service-card__desc">Save your natural tooth with our painless root canal treatment, which eliminates pain and infection, preserving your dental health. We use rotary endodontics for faster, more precise treatment with minimal discomfort.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card reveal">
+          <div class="service-card__icon service-card__icon--pink">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3 class="service-card__title">Fillings, Bridges & Veneers</h3>
+          <p class="service-card__desc">Enhance your smile with our custom fillings, bridges, and veneers, designed to blend seamlessly with your natural teeth. We use tooth-colored composite and ceramic materials for a flawless, natural look.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-card__icon service-card__icon--blue">
+            <i class="fas fa-x-ray"></i>
+          </div>
+          <h3 class="service-card__title">Dental Implants</h3>
+          <p class="service-card__desc">Our dental implants offer a permanent solution for missing teeth, providing strength, stability, and a natural appearance. Titanium and zirconia implant options with success rates exceeding 97%.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-card__icon service-card__icon--purple">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <h3 class="service-card__title">Braces / Aligners</h3>
+          <p class="service-card__desc">Achieve a straight, beautiful smile with our braces and aligners, suitable for both teens and adults seeking orthodontic care. Options include metal braces, ceramic braces, and invisible aligners like Invisalign.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-card reveal">
+          <div class="service-card__icon service-card__icon--green">
+            <i class="fas fa-broom"></i>
+          </div>
+          <h3 class="service-card__title">Dental Cleaning</h3>
+          <p class="service-card__desc">Keep your smile bright and healthy with our professional dental cleaning services, removing plaque and tartar build-up. Includes ultrasonic scaling, polishing, and personalized oral hygiene counseling.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-card__icon service-card__icon--pink">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="service-card__title">Smile Designing</h3>
+          <p class="service-card__desc">Transform your smile with our personalized smile designing services, tailored to enhance your natural beauty and confidence. Digital Smile Design (DSD) lets you preview your new smile before treatment begins.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-card__icon service-card__icon--blue">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <h3 class="service-card__title">Full Mouth Rehabilitation</h3>
+          <p class="service-card__desc">Our full mouth rehabilitation services restore your dental health and function, giving you a comprehensive and lasting solution. Combines multiple treatment modalities for a complete oral transformation.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="service-card reveal">
+          <div class="service-card__icon service-card__icon--purple">
+            <i class="fas fa-hand-holding-medical"></i>
+          </div>
+          <h3 class="service-card__title">Teeth Extraction</h3>
+          <p class="service-card__desc">Our teeth extraction services are safe and efficient, ensuring minimal discomfort and a smooth recovery process. Includes wisdom tooth removal and surgical extractions with advanced local anesthesia techniques.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 11 -->
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-card__icon service-card__icon--green">
+            <i class="fas fa-head-side-mask"></i>
+          </div>
+          <h3 class="service-card__title">Maxillofacial Rehabilitation</h3>
+          <p class="service-card__desc">Our maxillofacial rehabilitation services address complex dental and facial issues, providing comprehensive care and support. Includes jaw surgery, TMJ disorder treatment, and post-trauma facial reconstruction.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Service 12 - NEW -->
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-card__icon service-card__icon--pink">
+            <i class="fas fa-syringe"></i>
+          </div>
+          <h3 class="service-card__title">Hair Transplant & PRP Therapy</h3>
+          <p class="service-card__desc">Advanced hair transplantation using FUE technique for natural-looking results. PRP injections for hair fall control and facial rejuvenation to restore your youthful appearance and confidence.</p>
+          <a href="#appointment" class="service-card__link">Book consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="features__grid">
+        <div class="reveal">
+          <div class="section-badge"><i class="fas fa-circle"></i> Why Choose Us</div>
+          <h2 class="section-title">Features That Set Us Apart</h2>
+          <p class="section-subtitle" style="max-width: 100%">
+            Experience exceptional dental care at our modern clinic. Our skilled dentists utilize advanced technology for precise diagnoses and treatments. We prioritize your comfort with a friendly staff and inviting environment.
+          </p>
+
+          <div class="features__list" style="margin-top: 36px;">
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">Professional</div>
+                <div class="feature-item__value">Experienced Doctors</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-check-double"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">Guaranteed</div>
+                <div class="feature-item__value">Quality Services</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-comment-medical"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">Free</div>
+                <div class="feature-item__value">Positive Consultation</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-headphones-alt"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">Available</div>
+                <div class="feature-item__value">24/7 Support</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">International</div>
+                <div class="feature-item__value">Sterilization Standards</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <div>
+                <div class="feature-item__label">Flexible</div>
+                <div class="feature-item__value">EMI Payment Options</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card featured" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"Loved the vibe! The ceramic painting was so much fun and the food was delicious. A perfect blend of creativity and great cuisine. Will definitely be back!"</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">KP</div>
-            <span>Kannu P.</span>
-          </div>
+
+        <div class="reveal reveal--delay-2">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Modern dental equipment" class="features__image">
         </div>
-        <div class="testimonial-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"A hidden gem in JP Nagar! Perfect for a date, a team outing, or even solo creative time. The art sessions and food menu are both outstanding."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">PA</div>
-            <span>Peter A.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCTOR ===== -->
+  <section class="section section--alt" id="doctor">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> Our Doctor</div>
+        <h2 class="section-title">Meet Your Experienced Dentist</h2>
+        <p class="section-subtitle">Led by one of Bengaluru's most trusted dental surgeons with over 15 years of clinical expertise.</p>
+      </div>
+
+      <div class="doctor__grid">
+        <div class="doctor__image-wrapper reveal">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80" alt="Dr. Vinayak T Banakar" class="doctor__image">
+          <div class="doctor__image-glow"></div>
+        </div>
+
+        <div class="reveal reveal--delay-2">
+          <div class="doctor__info-header">
+            <h3 class="doctor__name">Dr. Vinayak T Banakar</h3>
+            <p class="doctor__qualification">BDS, MDS — Oral & Maxillofacial Surgery<br>Fellowship in Aesthetic Dentistry</p>
+          </div>
+
+          <p class="doctor__bio">
+            Dr. Vinayak T Banakar is a highly skilled dental surgeon specializing in Oral & Maxillofacial Surgery with an additional Fellowship in Aesthetic Dentistry. With over 15 years of clinical experience, he has successfully performed thousands of procedures ranging from complex implant surgeries to delicate smile makeovers.
+          </p>
+          <p class="doctor__bio">
+            His expertise spans across dental implants, smile designing, hair transplantation, PRP therapy, facial rejuvenation, and maxillofacial reconstruction. Dr. Vinayak is known for his patient-centric approach, ensuring every treatment plan is personalized to achieve the best possible outcomes.
+          </p>
+          <p class="doctor__bio">
+            He regularly attends international conferences and workshops to stay at the forefront of dental innovation, bringing cutting-edge techniques and technologies to his practice in Yelahanka, Bengaluru.
+          </p>
+
+          <div class="doctor__specializations">
+            <span class="doctor__spec-tag">Oral Surgery</span>
+            <span class="doctor__spec-tag">Dental Implants</span>
+            <span class="doctor__spec-tag">Smile Design</span>
+            <span class="doctor__spec-tag">Hair Transplant</span>
+            <span class="doctor__spec-tag">PRP Therapy</span>
+            <span class="doctor__spec-tag">Aesthetic Dentistry</span>
+            <span class="doctor__spec-tag">Maxillofacial Surgery</span>
+            <span class="doctor__spec-tag">Laser Dentistry</span>
+          </div>
+
+          <div class="doctor__socials">
+            <a href="https://www.facebook.com/vinayakatbanakar" class="doctor__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919606371778" class="doctor__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/advancedentalandaesthetics?utm_source=qr&igsh=Z3ZwMjBhMDJheHI0" class="doctor__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@vinayakamaxfax?si=swy1al1e4xkRBgZd" class="doctor__social-link" aria-label="YouTube" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section class="contact section" id="contact">
+  <!-- ===== 360° TOUR ===== -->
+  <section class="section" id="tour">
     <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Reach Us</span>
-        <h2>Have a Question?<br /><em>We'd Love to Hear From You!</em></h2>
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> Virtual Tour</div>
+        <h2 class="section-title">Explore Our Waiting Hall</h2>
+        <p class="section-subtitle">Take a 360° virtual tour of our modern, comfortable waiting area designed for your relaxation.</p>
       </div>
-      <div class="contact-grid">
-        <div class="contact-info" data-animate>
-          <div class="contact-block">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h4>Address</h4>
-              <p>39, 15th Cross, 100 Feet Ring Rd, 4th Phase,<br />J. P. Nagar, Bengaluru, Karnataka 560078</p>
-              <p class="landmark">📍 Near Vega City Mall · Next to Bodycraft Salon & HDFC Bank</p>
-              <a href="https://g.co/kgs/B4YFESY" target="_blank" class="map-link" id="contact-map-btn">Get Directions →</a>
-            </div>
+
+      <div class="tour__wrapper reveal">
+        <div class="tour__overlay">
+          <i class="fas fa-vr-cardboard"></i> 360° Interactive View
+        </div>
+        <iframe src="https://momento360.com/e/u/e3129dc79614402dba533f93e85e8466?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&autoplay-annotations=true&display-plan=true" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKING HOURS & MAP ===== -->
+  <section class="section section--alt" id="hours">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> Visit Us</div>
+        <h2 class="section-title">Working Hours & Location</h2>
+        <p class="section-subtitle">We're conveniently located opposite RMZ Galleria Mall, Yelahanka Old Town.</p>
+      </div>
+
+      <div class="timings__wrapper reveal">
+        <div class="timings__card">
+          <h3 class="timings__card-title"><i class="fas fa-clock"></i> Working Hours</h3>
+          <div class="timings__row">
+            <span class="timings__row-day">Monday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
           </div>
-          <div class="contact-block">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <h4>Opening Hours</h4>
-              <p>Tuesday – Sunday: <strong>11am – 11pm</strong></p>
-              <p>Open on all Holidays!</p>
-            </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Tuesday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
           </div>
-          <div class="contact-block">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.92 16.92z"/></svg>
-            </div>
-            <div>
-              <h4>Phone</h4>
-              <p><a href="tel:+919019250575">+91 9019 250575</a></p>
-              <p>WhatsApp: <a href="https://wa.me/917019115511" target="_blank">+91 70191 15511</a></p>
-            </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Wednesday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
           </div>
-          <div class="contact-block">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <h4>Email</h4>
-              <p><a href="mailto:ask@klayworkzbarista.com">ask@klayworkzbarista.com</a></p>
-            </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Thursday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
           </div>
-          <div class="social-links">
-            <h4>Follow Us</h4>
-            <div class="socials">
-              <a href="https://www.instagram.com/klayworkzbarista" target="_blank" class="social-btn" id="social-ig-main" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                @klayworkzbarista
-              </a>
-              <a href="https://www.instagram.com/artatklayworkz/" target="_blank" class="social-btn" id="social-ig-art" aria-label="Art Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                @artatklayworkz
-              </a>
-              <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank" class="social-btn" id="social-li" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                LinkedIn
-              </a>
-              <a href="https://wa.me/917019115511" target="_blank" class="social-btn" id="social-wa" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                WhatsApp
-              </a>
-            </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Friday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
+          </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Saturday</span>
+            <span class="timings__row-hours open">10:00 AM – 9:00 PM</span>
+          </div>
+          <div class="timings__row">
+            <span class="timings__row-day">Sunday</span>
+            <span class="timings__row-hours open">10:00 AM – 2:00 PM</span>
           </div>
         </div>
 
-        <div class="contact-form-wrap" data-animate>
-          <form class="contact-form" id="contactForm" novalidate>
-            <h3>Send Us a Message</h3>
-            <div class="form-row">
+        <div class="timings__map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d77.5700!3d13.1000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAdvance+Dental+%26+Aesthetics!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPOINTMENT & CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="appointment__grid">
+        <div class="reveal">
+          <div class="section-badge"><i class="fas fa-circle"></i> Get in Touch</div>
+          <h2 class="section-title">Make An Appointment To Visit Our Doctor</h2>
+          <p class="section-subtitle" style="max-width: 100%">
+            We are available 24/7 to answer your questions and book your appointment. Contact us today to schedule your visit and experience exceptional dental care. Walk-ins are also welcome during clinic hours.
+          </p>
+
+          <div class="appointment__contact-cards">
+            <a href="tel:+919606371778" style="text-decoration: none;">
+              <div class="contact-card">
+                <div class="contact-card__icon contact-card__icon--phone">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <div class="contact-card__label">Call Us Now</div>
+                  <div class="contact-card__value">+91 96063 71778</div>
+                </div>
+              </div>
+            </a>
+            <a href="mailto:advance.dental.aesthetics1@gmail.com" style="text-decoration: none;">
+              <div class="contact-card">
+                <div class="contact-card__icon contact-card__icon--email">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="contact-card__label">Email Us</div>
+                  <div class="contact-card__value">advance.dental.aesthetics1@gmail.com</div>
+                </div>
+              </div>
+            </a>
+            <div class="contact-card">
+              <div class="contact-card__icon contact-card__icon--location">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <div class="contact-card__label">Visit Us</div>
+                <div class="contact-card__value">Opp to RMZ Galleria Mall, Sony Center Building, Yelahanka Old Town, Bengaluru 560064</div>
+              </div>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=919606371778" style="text-decoration: none;" target="_blank" rel="noopener">
+              <div class="contact-card">
+                <div class="contact-card__icon contact-card__icon--whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div class="contact-card__label">WhatsApp</div>
+                  <div class="contact-card__value">Chat with us instantly</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="appointment__form-wrapper reveal reveal--delay-2" id="appointment">
+          <h3 class="appointment__form-title">Book Your Appointment</h3>
+          <p class="appointment__form-desc">Fill in the form below and we'll get back to you within 30 minutes.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST" id="appointment-form">
+            <input type="hidden" name="access_key" value="6a5710a5-037f-43f0-99c4-409c36ad1a24">
+            <input type="hidden" name="subject" value="New Appointment Booking - Advance Dental">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <div class="form-grid">
               <div class="form-group">
-                <label for="cf-name">Your Name</label>
-                <input type="text" id="cf-name" name="name" placeholder="John Doe" required />
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" class="form-input" id="name" name="Name" placeholder="John Doe" required>
               </div>
               <div class="form-group">
-                <label for="cf-email">Email Address</label>
-                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" class="form-input" id="email" name="Email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" class="form-input" id="phone" name="Phone-No" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="service">Service Needed</label>
+                <select class="form-select" id="service" name="Service">
+                  <option value="">Select a service</option>
+                  <option value="Dental Implants">Dental Implants</option>
+                  <option value="Smile Designing">Smile Designing</option>
+                  <option value="Root Canal">Root Canal Treatment</option>
+                  <option value="Braces/Aligners">Braces / Aligners</option>
+                  <option value="Teeth Whitening">Teeth Whitening</option>
+                  <option value="Dental Cleaning">Dental Cleaning</option>
+                  <option value="Hair Transplant">Hair Transplant</option>
+                  <option value="PRP Therapy">PRP Therapy</option>
+                  <option value="Dentures">Complete / Partial Dentures</option>
+                  <option value="Extraction">Teeth Extraction</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="date">Preferred Date</label>
+                <input type="date" class="form-input" id="date" name="Date">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="time">Preferred Time</label>
+                <input type="time" class="form-input" id="time" name="Time">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="coupon">Coupon Code (Optional)</label>
+                <input type="text" class="form-input" id="coupon" name="coupon" placeholder="Enter coupon code">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="referral">How did you hear about us?</label>
+                <select class="form-select" id="referral" name="Referral">
+                  <option value="">Select</option>
+                  <option value="Google">Google Search</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Friend">Friend / Family</option>
+                  <option value="Walk-in">Walk-in</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label" for="problem">Describe Your Concern</label>
+                <textarea class="form-textarea" id="problem" name="Problem" rows="4" placeholder="Tell us about your dental concern..."></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+                  Book Appointment <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </div>
-            <div class="form-group">
-              <label for="cf-phone">Phone Number</label>
-              <input type="tel" id="cf-phone" name="phone" placeholder="+91 98765 43210" />
-            </div>
-            <div class="form-group">
-              <label for="cf-subject">Subject</label>
-              <select id="cf-subject" name="subject">
-                <option value="">Select a topic...</option>
-                <option value="reservation">Reservation Inquiry</option>
-                <option value="event">Private Event / Corporate</option>
-                <option value="workshop">Workshop Booking</option>
-                <option value="general">General Inquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="message" rows="4" placeholder="Tell us more about your visit or event..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="cf-submit-btn">Send Message</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo footer-logo">
-            <span class="logo-klay">Klay</span><span class="logo-bar">Bar</span>
-          </a>
-          <p>Klayworkz Barista – KlayBar Art Café. A fusion restaurant & art café in JP Nagar, Bengaluru, where food meets creativity.</p>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section--alt" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> Testimonials</div>
+        <h2 class="section-title">What Our Patients Say</h2>
+        <p class="section-subtitle">Real stories from real patients who transformed their smiles with us.</p>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__text">"Dr. Vinayak is an outstanding dentist! He made my root canal treatment completely painless. The clinic is modern and the staff is incredibly friendly. Highly recommend to anyone looking for quality dental care in Yelahanka."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">RK</div>
+            <div>
+              <div class="testimonial-card__name">Rajesh Kumar</div>
+              <div class="testimonial-card__role">Root Canal Patient</div>
+            </div>
+          </div>
         </div>
-        <div class="footer-nav">
-          <h5>Navigate</h5>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="food.html">Food & Beverages</a></li>
-            <li><a href="art.html">Art – DIY</a></li>
-            <li><a href="reservations.html">Reservations</a></li>
-            <li><a href="foundingteam.html">Founding Team</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-          </ul>
+
+        <div class="testimonial-card reveal reveal--delay-1">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__text">"Got my smile makeover done here and I couldn't be happier with the results! The digital smile design preview was amazing — I could see exactly how my smile would look before the treatment even started. Truly life-changing!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">PS</div>
+            <div>
+              <div class="testimonial-card__name">Priya Sharma</div>
+              <div class="testimonial-card__role">Smile Design Patient</div>
+            </div>
+          </div>
         </div>
-        <div class="footer-nav">
-          <h5>Legal</h5>
-          <ul>
-            <li><a href="https://www.klaybar.net/accessibility-statement" target="_blank">Accessibility</a></li>
-            <li><a href="https://www.klaybar.net/blank-1" target="_blank">Refund Policy</a></li>
-            <li><a href="https://www.klaybar.net/blank" target="_blank">Terms & Conditions</a></li>
-            <li><a href="https://www.klaybar.net/privacy-policy" target="_blank">Privacy Policy</a></li>
-          </ul>
+
+        <div class="testimonial-card reveal reveal--delay-2">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__text">"Best dental clinic in Yelahanka! My dental implant procedure was smooth and the recovery was quick. Dr. Vinayak explained everything clearly and made me feel comfortable throughout. The PRP therapy results have been fantastic too."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AM</div>
+            <div>
+              <div class="testimonial-card__name">Arun Menon</div>
+              <div class="testimonial-card__role">Implant & PRP Patient</div>
+            </div>
+          </div>
         </div>
-        <div class="footer-contact">
-          <h5>Contact</h5>
-          <p>39, 15th Cross, 100 Feet Ring Rd, 4th Phase, J. P. Nagar, Bengaluru, Karnataka 560078</p>
-          <p>📍 Near Vega City Mall · Next to Bodycraft Salon & HDFC Bank</p>
-          <p><a href="mailto:ask@klayworkzbarista.com">ask@klayworkzbarista.com</a></p>
-          <p><a href="tel:+919019250575">+91 9019 250575</a></p>
-          <p>Tue–Sun: 11am – 11pm</p>
+      </div>
+
+      <!-- Google reviews embed -->
+      <div style="margin-top: 48px;" class="reveal">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-dd51bec7-8659-4e5e-a60b-490b7b9d109b" data-elfsight-app-lazy></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-circle"></i> FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Have questions? We have answers. Find the most common queries below.</p>
+      </div>
+
+      <div class="faq__grid reveal">
+        <div class="faq-item active">
+          <button class="faq-item__question">
+            What are your clinic timings?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              We are open Monday to Saturday from 10:00 AM to 9:00 PM, and on Sundays from 10:00 AM to 2:00 PM. We also offer emergency dental services outside regular hours — just call us at +91 96063 71778.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Do you offer painless dental treatments?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              Yes! We use the latest anesthesia techniques and laser dentistry to ensure virtually pain-free treatments. Whether it's a root canal, extraction, or implant, patient comfort is our top priority.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            How much do dental implants cost?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              Dental implant costs vary depending on the type (titanium vs. zirconia), number of implants needed, and any additional procedures. We offer competitive pricing and flexible EMI options. Book a free consultation to get a personalized treatment plan and cost estimate.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Do you accept insurance or offer EMI payments?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              We accept all major dental insurance plans and offer flexible EMI payment options for treatments above a certain amount. Our team can help you understand your insurance coverage and work out a payment plan that suits your budget.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            What is smile designing and who is it for?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              Smile designing is a comprehensive cosmetic dental procedure that combines multiple treatments — veneers, crowns, teeth whitening, alignment — to create your ideal smile. It's perfect for anyone who wants to improve the appearance of their teeth. We use Digital Smile Design (DSD) technology so you can preview your new smile before any treatment begins.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Is it safe to get a hair transplant at a dental clinic?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              Absolutely. Dr. Vinayak is a qualified Oral & Maxillofacial Surgeon, which means he is trained in complex surgical procedures of the head and face. Hair transplantation (FUE) falls well within his area of surgical expertise. Our clinic follows strict sterilization protocols and international safety standards.
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>© 2025 Klayworkz Barista – KlayBar Art Café. All rights reserved.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/klayworkzbarista" target="_blank" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#" class="navbar__logo" style="margin-bottom: 4px;">
+            <div class="navbar__logo-icon">
+              <i class="fas fa-tooth"></i>
+            </div>
+            Advance Dental & Aesthetics
           </a>
-          <a href="https://in.linkedin.com/company/klayworkzbarista-klaybar" target="_blank" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://wa.me/917019115511" target="_blank" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </a>
+          <p class="footer__brand-desc">
+            Your trusted destination for comprehensive dental care and aesthetic treatments in Yelahanka, Bengaluru. Modern technology, experienced doctors, and personalized care — all under one roof.
+          </p>
+          <div class="footer__socials">
+            <a href="https://www.instagram.com/advancedentalandaesthetics?utm_source=qr&igsh=Z3ZwMjBhMDJheHI0" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@vinayakamaxfax?si=swy1al1e4xkRBgZd" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919606371778" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/vinayakatbanakar" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
+
+        <div>
+          <h4 class="footer__heading">Dental Services</h4>
+          <ul class="footer__links">
+            <li><a href="#services">Implant Surgery</a></li>
+            <li><a href="#services">Invisalign</a></li>
+            <li><a href="#services">Smile Designing</a></li>
+            <li><a href="#services">Zirconia Crowns</a></li>
+            <li><a href="#services">Complete Dentures</a></li>
+            <li><a href="#services">Partial Dentures</a></li>
+            <li><a href="#services">Root Canal Treatment</a></li>
+            <li><a href="#services">Fillings & Veneers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">More Services</h4>
+          <ul class="footer__links">
+            <li><a href="#services">Crowns & Bridges</a></li>
+            <li><a href="#services">Braces / Aligners</a></li>
+            <li><a href="#services">Full Mouth Rehab</a></li>
+            <li><a href="#services">Teeth Extraction</a></li>
+            <li><a href="#services">Maxillofacial Rehab</a></li>
+            <li><a href="#services">Dental Cleaning</a></li>
+            <li><a href="#services">Pediatric Dentistry</a></li>
+            <li><a href="#services">Laser Treatment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Aesthetic Services</h4>
+          <ul class="footer__links">
+            <li><a href="#services">Hair Transplantation</a></li>
+            <li><a href="#services">PRP for Hair Fall</a></li>
+            <li><a href="#services">PRP Facial Rejuvenation</a></li>
+            <li><a href="#services">Scar Revision</a></li>
+            <li><a href="#services">Teeth Whitening</a></li>
+          </ul>
+          <h4 class="footer__heading" style="margin-top: 28px;">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+919606371778"><i class="fas fa-phone-alt" style="margin-right:6px; font-size:0.8rem;"></i>+91 96063 71778</a></li>
+            <li><a href="mailto:advance.dental.aesthetics1@gmail.com"><i class="fas fa-envelope" style="margin-right:6px; font-size:0.8rem;"></i>Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2024 Advance Dental & Aesthetics. All rights reserved.</span>
+        <span>Yelahanka Old Town, Bengaluru, Karnataka 560064</span>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/917019115511" target="_blank" class="whatsapp-float" id="whatsapp-float-btn" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://api.whatsapp.com/send?phone=919606371778" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
   <script src="main.js"></script>
+
 </body>
 </html>
